@@ -1,5 +1,4 @@
 #qpy:kivy
-#test
 
 from kivy import require
 require("1.8.0")
@@ -10,12 +9,17 @@ from kivy.lang import Builder
 
 from kivy.uix.button import Button
 
-from random import randint
+from random import random
 
 class ButtonNewClass(Button) :
 	def on_press(self) :
 		self.text = "Pressed"
-		self.background_color = (1, 0, 0, 1)
+		rgbaColors = []
+		for i in range(3) :
+			rgbaColors.append(random())
+		rgbaColors.append(1.0)
+		print(rgbaColors)
+		self.background_color = rgbaColors
 		print("Click on " + str(self.name) + "!")
 
 firstBuilder = Builder.load_string("""
