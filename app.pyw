@@ -1,4 +1,5 @@
 #qpy:kivy
+#test
 
 from kivy import require
 require("1.8.0")
