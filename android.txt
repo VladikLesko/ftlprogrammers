@@ -1,0 +1,4 @@
+title=SimpleApp
+author=VladikLesko
+orientation=landscape
+fullscreen=1
