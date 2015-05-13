@@ -1,4 +1,4 @@
 title=SimpleApp
 author=VladikLesko
-orientation=landscape
-fullscreen=1
+orientation=portrait
+fullscreen=0
