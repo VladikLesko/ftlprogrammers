@@ -2,19 +2,7 @@
 from kivy import require
 require("1.8.0")
 
-from kivy.app import App
-
-from kivy.clock import Clock
-
-from kivy.uix.button import Button
-from kivy.uix.screenmanager import Screen, ScreenManager
-
 from kivy.lang import Builder
-
-from random import randint, random
-from time import sleep
-from threading import Thread
-
 Builder.load_string("""
 #:kivy 1.8.0
 <MainButtonClass>:
@@ -77,6 +65,7 @@ Builder.load_string("""
 			on_press:
 				root.manager.transition.direction = root.get_random_direction()
 				root.manager.current = "MainWindow"
+
 <RandomButton>:
 	text: "0"
 	bold: True
@@ -121,6 +110,19 @@ Builder.load_string("""
 		size_hint: (0.3, 0.25)
 		pos_hint: {"x": 0.65, "y": 0.55}
 """)
+
+from kivy.app import App
+
+from kivy.clock import Clock
+
+from kivy.uix.button import Button
+from kivy.uix.screenmanager import Screen, ScreenManager
+
+from kivy.lang import Builder
+
+from random import randint, random
+from time import sleep
+from threading import Thread
 
 class MainButtonClass(Button) :
 	pass
